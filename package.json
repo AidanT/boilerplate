@@ -1,0 +1,47 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "gulp start",
+    "build": "gulp build",
+    "up": "node ./dist",
+    "lint": "standard"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.41",
+    "@babel/preset-env": "^7.0.0-beta.41",
+    "@babel/preset-stage-0": "^7.0.0-beta.41",
+    "@babel/register": "^7.0.0-beta.41",
+    "babel-eslint": "^8.2.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-newer": "^1.4.0",
+    "standard": "^11.0.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
+      "@babel/preset-stage-0"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "dist/**"
+    ]
+  }
+}
